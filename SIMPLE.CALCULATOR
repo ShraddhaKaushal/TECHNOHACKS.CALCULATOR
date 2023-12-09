@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<p>WELCOME TO MY CALCULATOR!!</p>
+</body>
+  <head>
+      <style>
+        input[type="button"]
+        {
+          height:50%;
+          width:90%;
+        }    
+      </style>
+  </head>
+  <body>
+  <script>
+    function take(value)
+    {
+      document.getElementById("a").value+=value;
+    }
+    function execute()
+    {
+      var x=document.getElementById("a").value;
+      var y=eval(x);
+      document.getElementById("a").value=y;
+    } 
+    function all_clr()
+    {
+      document.getElementById("a").value=" ";
+    }
+  </script>
+  <table>
+      <tr>
+        <th colspan="4"><input type="text" id="a">
+      </tr>
+      <tr>
+        <th><input type="button" value="(" onclick="take('(')">
+        <th><input type="button" value=")" onclick="take(')')">
+        <th><input type="button" value="^" onclick="take('**')">
+        <th><input type="button" value="AC" onclick="all_clr()">
+      </tr>
+      <tr>
+        <th><input type="button" value="1" onclick="take(1)">
+        <th><input type="button" value="2" onclick="take(2)">
+        <th><input type="button" value="3" onclick="take(3)">
+        <th><input type="button" value="*" onclick="take('*')">
+      </tr>
+      <tr>
+        <th><input type="button" value="4" onclick="take(4)">
+        <th><input type="button" value="5" onclick="take(5)">
+        <th><input type="button" value="6" onclick="take(6)">
+        <th><input type="button" value="/" onclick="take('/')">
+      </tr>
+      <tr>
+        <th><input type="button" value="7" onclick="take(7)">
+        <th><input type="button" value="8" onclick="take(8)">
+        <th><input type="button" value="9" onclick="take(9)">
+        <th><input type="button" value="+" onclick="take('+')">
+      </tr>
+      <tr>
+        <th><input type="button" value="." onclick="take('.')">
+        <th><input type="button" value="0" onclick="take(0)">
+        <th><input type="button" value="=" onclick="execute()">
+        <th><input type="button" value="-" onclick="take('-')">
+      </tr>
+    
+  </table>
+  </body>
+</html>
